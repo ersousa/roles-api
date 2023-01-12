@@ -9,11 +9,13 @@ import lombok.Setter;
 public class RoleDTO {
     private String id;
     private String title;
+    private String description;
 
     public static RoleDTO convert(Role role){
         RoleDTO roleDTO = new RoleDTO();
         roleDTO.setId(role.getId().toString());
         roleDTO.setTitle(role.getTitle());
+        roleDTO.setDescription(role.getDescription());
         return roleDTO;
     }
 }

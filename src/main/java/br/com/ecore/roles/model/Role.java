@@ -18,4 +18,15 @@ public class Role {
     private Long id;
     @Column(name = "title")
     private String title;
+
+    @Column(name = "description")
+    private String description;
+
+    public static Role convert(RoleDTO roleDTO){
+        Role role = new Role();
+        role.setId(Long.valueOf(roleDTO.getId()));
+        role.setTitle(roleDTO.getTitle());
+        role.setDescription(roleDTO.getDescription());
+        return role;
+    }
 }
